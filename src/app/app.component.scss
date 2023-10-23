@@ -1,22 +1,52 @@
 .navbar-logo{
-    height: 55px;
+    height: 75px;
+}
+
+.website-image{
+  padding-top: 20%;
+}
+
+.delivery-image{
+  padding-top: 5%;
 }
 
 .carousel-container {
     height: 500px; /* Adjust this value to your preferred fixed height */
   }
 
+  .carousel-inner{
+    height: 450px;
+  }
   .hero-btn{
-    background-color: powderblue;
+    background-color: #b3cee3;
     color: white;
   }
 .divider{
-    background-color: powderblue;
+    background-color: #b3cee3;
     height: 125px;
-    padding-top: 25px
+    padding-top: 25px;
+    margin-bottom: 100px;
+}
+
+.phone{
+  text-decoration: none;
+  color: darkgray;
 }
 
 .divider-header{
     text-align: center;
     color: white;
+}
+
+.featurette-divider{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.service-text{
+  width: 50%;
+}
+
+.footer{
+  margin-top: 150px;
 }
