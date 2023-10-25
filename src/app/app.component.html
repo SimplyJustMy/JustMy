@@ -1,11 +1,9 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img class="navbar-logo" src="../assets/site_logo_nobck.png" alt="logo"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    
+    <div class="" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-lg-0">
       </ul>
       <div (mouseenter)="showPhoneNumber = true" (mouseleave)="showPhoneNumber = false">
         <button type="button" class="hero-btn btn btn-lg" *ngIf="!showPhoneNumber">Get In Touch</button>
@@ -17,7 +15,7 @@
 
 <div class="container col-xxl-8 px-4 ">
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-    <div class="col-10 col-sm-8 col-lg-6">
+    <div class="header-carousel col-10 col-sm-8 col-lg-6">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -32,7 +30,7 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-6">
+    <div class="hero-text col-lg-6">
       <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Starting a local business?</h1>
       <p class="lead">Leave the tech services to us while you focus on what you do best - running your business!</p>
       <div class="d-grid gap-2 d-md-flex justify-content-md-start">
