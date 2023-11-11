@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img class="navbar-logo" src="../assets/site_logo_nobck.png" alt="logo"></a>
+      
+      <div class="" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-lg-0">
+        </ul>
+  
+        <!-- Buttons container -->
+        <div class="d-flex">
+          <button type="button" (click)="goToAbout()" class="about-btn btn btn-lg">About Us</button>
+          
+          <div class="call-btn" (mouseenter)="showPhoneNumber = true" (mouseleave)="showPhoneNumber = false">
+            <button type="button" class="hero-btn btn btn-lg" *ngIf="!showPhoneNumber">Get In Touch</button>
+            <a class="phone" href="tel:+18456087516" *ngIf="showPhoneNumber"><h4 class="phone-text">Call 845-608-7516</h4></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>

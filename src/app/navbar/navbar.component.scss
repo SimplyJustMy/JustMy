@@ -1,0 +1,57 @@
+.navbar-logo{
+    height: 75px;
+}
+
+/* CSS for the navigation bar */
+.navbar {
+    background-color: #b3cee3; /* Adjust the background color as needed */
+    margin: 0;
+  }
+  
+  .navbar-brand img {
+    height: 50px; /* Adjust the height of the logo as needed */
+  }
+  
+  .navbar-nav {
+    margin-right: 25px; /* Adjust the spacing of navigation items */
+  }
+  
+  .about-btn {
+    margin-right: 20px;
+    background-color: white;
+    color: #b3cee3;
+    border: 1px solid #b3cee3;
+  }
+  
+  .hero-btn {
+    background-color: #b3cee3;
+    color: white;
+  }
+  
+  .call-btn {
+    margin: auto;
+  }
+  
+  .phone {
+    text-decoration: none;
+    color: darkgray;
+  }
+  
+  .phone-text {
+    font-size: 26px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navbar-logo {
+      height: 50px;
+    }
+  
+    .hero-btn {
+      font-size: 14px;
+    }
+  
+    .phone-text {
+      font-size: 16px;
+    }
+  }
+  
