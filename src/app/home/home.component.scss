@@ -24,8 +24,11 @@
 .divider {
   background-color: #b3cee3;
   height: 125px;
-  padding-top: 2.5%;
   margin-bottom: 100px;
+}
+
+.divider-content{
+  height: 100%;
 }
 
 .phone {
@@ -36,11 +39,11 @@
 .divider-header {
   text-align: center;
   color: white;
+  padding: 2%;
 }
 
 .featurette-divider {
   margin-top: 100px;
-  margin-bottom: 100px;
 }
 
 .service-text {
@@ -49,6 +52,14 @@
 
 .footer {
   margin-top: 150px;
+}
+
+.header-carousel {
+  margin: auto;
+}
+
+.hero-text {
+  margin: auto;
 }
 
 /* Media Queries for Responsive Design */
@@ -68,6 +79,7 @@
 
   .hero-text {
       text-align: center;
+      margin: auto;
   }
 }
 
@@ -112,6 +124,7 @@
 
 .container-features {
   margin-top: 100px;
+  padding: 5%;
 }
 
 .site-links {
@@ -186,4 +199,9 @@
 .link {
   text-decoration: none;
   color: white;
+}
+
+.work-title{
+  margin: auto;
+  text-align: center;
 }

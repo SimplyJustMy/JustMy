@@ -8,9 +8,6 @@
     margin: 0;
   }
   
-  .navbar-brand img {
-    height: 50px; /* Adjust the height of the logo as needed */
-  }
   
   .navbar-nav {
     margin-right: 25px; /* Adjust the spacing of navigation items */
@@ -40,11 +37,17 @@
   .phone-text {
     font-size: 26px;
   }
+  .navbar-toggler{
+    display: none;
+  }
+
   
   @media screen and (max-width: 768px) {
-    .navbar-logo {
-      height: 50px;
+
+    .navbar-toggler{
+      display: none;
     }
+    
   
     .hero-btn {
       font-size: 14px;
@@ -54,4 +57,29 @@
       font-size: 16px;
     }
   }
+
+  
+  @media screen and (max-width: 426px) {
+
+    .navbar-brand img {
+      height: 65px; /* Adjust the height of the logo as needed */
+    }
+
+    .navbar-brand {
+      margin: auto;
+    }
+
+    .navbar-toggler{
+      display: block;
+    }
+
+    #navbarSupportedContent{
+      margin: auto;
+    }
+
+    .navbar-nav{
+      display: none;
+    }
+  }
+
   
