@@ -58,12 +58,21 @@
   margin: auto;
 }
 
+/* Define default styles for the images */
+.card .mobile-img {
+  display: none; /* Initially hide mobile images */
+}
+
+
+
 /* Media Queries for Responsive Design */
 
 @media screen and (max-width: 768px) {
   .header-carousel {
       margin: auto;
   }
+
+ 
 
   .hero-btn {
       font-size: 14px;
@@ -82,6 +91,28 @@
 @media screen and (max-width: 426px) {
   .carousel-inner {
       height: 250px;
+  }
+
+  .card .card-img-top{
+    height: 1024px;
+  }
+
+  .card {
+    transition: transform 0.2s;
+    position: relative;
+    height: 625px !important;
+    width: 325px !important; /* Adjust the spacing between cards */
+    margin: 10px; /* Adjust the spacing between cards */
+  }
+
+  .card .desktop-img {
+    display: none; /* Hide desktop images on mobile */
+  }
+
+ 
+
+  .card .mobile-img {
+    display: block; /* Display mobile images on mobile screens */
   }
 
   .divider-header {
