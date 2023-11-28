@@ -299,3 +299,15 @@ i {
     color: #999;
     padding: 0 8px;
 }
+
+
+@media screen and (max-width: 426px) {
+    .about-hero{
+        text-align: center;
+    }
+
+    .title{
+        margin-bottom: 30px;
+    }
+}
+

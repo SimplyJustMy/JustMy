@@ -23,12 +23,7 @@
 
 .divider {
   background-color: #b3cee3;
-  height: 125px;
   margin-bottom: 100px;
-}
-
-.divider-content{
-  height: 100%;
 }
 
 .phone {
@@ -39,6 +34,7 @@
 .divider-header {
   text-align: center;
   color: white;
+  font-size: 32px;
   padding: 2%;
 }
 
@@ -88,6 +84,11 @@
       height: 250px;
   }
 
+  .divider-header {
+    font-size: 24px;
+  }
+  
+
   .phone-text {
       font-size: 16px;
   }
@@ -96,6 +97,10 @@
 @media screen and (max-width: 376px) {
   .carousel-inner {
       height: 180px;
+  }
+
+  .divider-header {
+    font-size: 22px;
   }
 }
 
@@ -123,7 +128,7 @@
 }
 
 .container-features {
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 5%;
 }
 
