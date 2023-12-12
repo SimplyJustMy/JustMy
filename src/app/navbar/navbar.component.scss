@@ -8,9 +8,16 @@
     margin: 0;
   }
   
+  .nav-item{
+    text-align: center;
+  }
   
   .navbar-nav {
-    margin-right: 25px; /* Adjust the spacing of navigation items */
+    font-size: 16px;
+    a{
+      text-decoration: none;
+    }
+    
   }
   
   .about-btn {
@@ -24,6 +31,7 @@
     background-color: #b3cee3;
     color: white;
     font-size: 18px;
+    margin-left: 15px;
   }
   
   .call-btn {
@@ -38,15 +46,53 @@
   .phone-text {
     font-size: 26px;
   }
-  .navbar-toggler{
-    display: none;
+
+  @media screen and (min-width: 1240px) {
+    .nav-pad{
+      padding-left: 55% !important;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .nav-pad{
+      padding-left: 45%;
+    }
+  }
+
+
+  @media screen and (max-width: 992px) {
+    .collapse:not(.show) {
+      display: none !important;
+    }
+
+
+    .navbar-nav{
+      float: none;
+    }
+
+    .call-btn{
+      display: none;
+    }
+
+    li{
+      float: none;
+    }
   }
 
   
   @media screen and (max-width: 768px) {
 
-    .navbar-toggler{
+
+    .navbar-toggler {
+      display: block;
+    }
+  
+    .navbar-collapse {
       display: none;
+    }
+  
+    .navbar-toggler.collapsed + .navbar-collapse {
+      display: block;
     }
   
     .phone-text {
@@ -61,21 +107,7 @@
       height: 65px; /* Adjust the height of the logo as needed */
     }
 
-    .navbar-brand {
-      margin: auto;
-    }
-
-    .navbar-toggler{
-      display: block;
-    }
-
-    #navbarSupportedContent{
-      margin: auto;
-    }
-
-    .navbar-nav{
-      display: none;
-    }
   }
 
+  
   
