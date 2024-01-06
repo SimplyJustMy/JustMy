@@ -1,5 +1,6 @@
 .navbar-logo{
     height: 75px;
+    margin-left: 25%;
 }
 
 /* CSS for the navigation bar */
@@ -64,6 +65,10 @@
     .collapse:not(.show) {
       display: none !important;
     }
+
+    .navbar-logo{
+      margin-left: 0;
+  }
 
 
     .navbar-nav{
