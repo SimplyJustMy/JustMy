@@ -1,0 +1,64 @@
+.image-aboutus-banner {
+    background: linear-gradient(#b3cee3ab, #b3cee3de), url("../../assets/hero_home.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    height: 500px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-text {
+    margin: auto;
+  }
+
+  .hero-text{
+    margin-top: 5%;
+    padding: 20px;
+    .title{
+      font-size: 64px;
+    }
+  
+    .blurb{
+      font-size: 28px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero-text {
+        text-align: center;
+        margin: auto;
+  
+        .title{
+          font-size: 48px;
+        }
+    }
+  
+    .image-aboutus-banner {
+      height: 400px;
+    }
+  
+    .hero-btn{
+      font-size: 24px;
+    }
+  }
+
+  @media screen and (max-width: 426px) {
+    .image-aboutus-banner {
+      height: 550px;
+    }
+}
+
+.call-btn {
+    margin: auto;
+  }
+
+  .hero-btn {
+    background-color: #ffffff;
+    color: #b3cee3;
+    font-size: 32px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+  }
+  

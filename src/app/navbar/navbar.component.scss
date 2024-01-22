@@ -5,7 +5,6 @@
 
 /* CSS for the navigation bar */
 .navbar {
-    background-color: #b3cee3; /* Adjust the background color as needed */
     margin: 0;
   }
   
@@ -85,34 +84,34 @@
   }
 
   
-  @media screen and (max-width: 768px) {
+  // @media screen and (max-width: 768px) {
 
 
-    .navbar-toggler {
-      display: block;
-    }
+  //   .navbar-toggler {
+  //     display: block;
+  //   }
   
-    .navbar-collapse {
-      display: none;
-    }
+  //   .navbar-collapse {
+  //     display: none;
+  //   }
   
-    .navbar-toggler.collapsed + .navbar-collapse {
-      display: block;
-    }
+  //   .navbar-toggler.collapsed + .navbar-collapse {
+  //     display: block;
+  //   }
   
-    .phone-text {
-      font-size: 16px;
-    }
-  }
+  //   .phone-text {
+  //     font-size: 16px;
+  //   }
+  // }
 
   
-  @media screen and (max-width: 426px) {
+  // @media screen and (max-width: 426px) {
 
-    .navbar-brand img {
-      height: 65px; /* Adjust the height of the logo as needed */
-    }
+  //   .navbar-brand img {
+  //     height: 65px; /* Adjust the height of the logo as needed */
+  //   }
 
-  }
+  // }
 
   
   

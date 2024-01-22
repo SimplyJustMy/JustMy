@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { CallActionComponent } from './call-action/call-action.component';
+import { HeroComponent } from './hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    CallActionComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,

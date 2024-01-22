@@ -1,146 +1,213 @@
-<!-- <div class="container col-xxl-8 px-4 ">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="header-carousel col-10 col-sm-8 col-lg-6">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="../assets/POS_image.jpg" class="d-block w-100" alt="...">
+<app-hero></app-hero>
+
+
+
+<div class="divider">
+  <div class="divider-content">
+    <p class="divider-header">Don't let technology stress you out. Focus on your passion, and we'll handle the tech.</p>
+  </div>
+</div>
+
+
+
+<!-- New Services -->
+<div class="services large-screen-content">
+
+  <div class="services-title">
+    <h1 class="title">What We <span style="color: #b3cee3;">Offer</span></h1>
+    <p class="services-subtitle">Helping Local Business thrive online through technological services.</p>
+  </div>
+
+  <div class="row services-row">
+    <div class="col-3 services-selection" [style.width.px]="selectedService.selectionWidth">
+      <div class="list-group">
+        <a *ngFor="let service of services" class="list-group-item list-group-item-action"
+          [class.active]="service === selectedService" (click)="selectService(service)">
+          {{ service.name }}
+        </a>
+      </div>
+    </div>
+    <div class="col-4 service-showcase" [style.width.px]="selectedService.showcaseWidth">
+      <div class="card-body">
+        <!-- Assuming this code is within a component template -->
+        <div class="container">
+          <div class="row">
+            <!-- Left column for text sections -->
+            <div class="col-md-6">
+              <div class="d-flex flex-column justify-content-between">
+                <h2 clas>What is it?</h2>
+                <p class="service-description">{{ selectedService.description }}</p>
+                <h2>How do we do it?</h2>
+                <p class="service-description">{{ selectedService.ourDescription }}</p>
+              </div>
             </div>
-            <div class="carousel-item">
-              <img src="../assets/Delivery_Image.jpg" class="delivery-image d-block w-100" alt="...">
+            <!-- Right column for image -->
+            <div class="col-md-4 img-col">
+              <img [src]="selectedService.image" [style.width.px]="selectedService.width" alt="Descriptive alt text">
             </div>
-            <div class="carousel-item">
-              <img src="../assets/website_image.jpg" class="website-image d-block w-100" alt="...">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- mobile services-->
+<div class="container mobile-services small-screen-content">
+
+  <div class="services-title">
+    <h1 class="title">What We <span style="color: #b3cee3;">Offer</span></h1>
+    <p class="services-subtitle">Helping Local Business thrive online through technological services.</p>
+  </div>
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item" *ngFor="let service of services; let i = index">
+      <h2 class="accordion-header" id="flush-heading{{ i }}">
+        <button class="accordion-button" [class.collapsed]="i !== 0" type="button" data-bs-toggle="collapse"
+          [attr.data-bs-target]="'#flush-collapse' + i" [attr.aria-expanded]="i === 0 ? 'true' : 'false'">
+          <p class="mobile-service-name">{{ service.name }}</p>
+        </button>
+      </h2>
+      <div id="flush-collapse{{ i }}" class="accordion-collapse collapse" [class.show]="i === 0"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <div class="container mb-5">
+            <div class="row">
+              <!-- Left column for text sections -->
+              <div class="col-md-6">
+                <div class="d-flex flex-column justify-content-between">
+                  <h2 clas>What is it?</h2>
+                  <p class="service-description">{{ service.description }}</p>
+                  <h2>How do we do it?</h2>
+                  <p class="service-description">{{ service.ourDescription }}</p>
+                </div>
+              </div>
+              <!-- Right column for image -->
+              <div class="col-md-4 img-col">
+                <img [src]="service.image" [style.width.px]="selectedService.width" alt="Descriptive alt text">
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
 
-      <div class="hero-text col-lg-6">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Elevate Your Business with Our Technological Touch.</h1>
-        <p class="lead">Leave the tech services to us while you focus on what you do best - running your business!</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+<div class="gradient-background">
+  <div class="container mb-5 pt-5 mmt-5">
+    <div class="work-title mb-5">
+      <h1 class="title">What We've <span class="highlighted-text">Done</span></h1>
+      <p class="services-subtitle">Growing local businesses everyday.</p>
+    </div>
+    <div class="card-container">
+      <!-- Card 1 -->
+      <div class="card sites">
+        <img src="../assets/ld_still.JPG" class="card-img-top desktop-img" alt="Image 1">
+        <img src="../assets/ld_mobile.png" class="card-img-top mobile-img" alt="Mobile Image 1">
+        <div class="overlay">
+          <p class="site-links">Click to visit <a class="link" href="https://www.lightingdistributorsllc.com/"
+              target="_blank">lightingdistributorsllc.com</a></p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card sites">
+        <img src="../assets/uwor.JPG" class="card-img-top desktop-img" alt="Image 2">
+        <img src="../assets/uwor_mobile.png" class="card-img-top mobile-img" alt="Mobile Image 2">
+        <div class="overlay">
+          <p class="site-links">Click to visit <a class="link" href="https://www.unitedwomenofrockland.com/"
+              target="_blank">unitedwomenofrockland.com</a></p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card sites">
+        <img src="../assets/fiesta.JPG" class="card-img-top desktop-img" alt="Image 3">
+        <img src="../assets/fiesta_mobile.png" class="card-img-top mobile-img" alt="Mobile Image 3">
+        <div class="overlay">
+          <p class="site-links">Click to visit <a class="link" href="https://www.fiestabowlnj.com/"
+              target="_blank">fiestabowl.com</a></p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card sites">
+        <img src="../assets/pcr.JPG" class="card-img-top desktop-img" alt="Image 4">
+        <img src="../assets/pcr_mobile.png" class="card-img-top mobile-img" alt="Mobile Image 4">
+        <div class="overlay">
+          <p class="site-links">Click to visit <a class="link" href="https://pcrdnatesting.com/"
+              target="_blank">pcrdnatesting.com</a></p>
         </div>
       </div>
     </div>
-</div> -->
-
-<div class="image-aboutus-banner">
-  <div class="container">
-   <div class="hero-text text-center">
-    <h1 class="title display-5 fw-bold lh-1 mb-3">Elevate Your Business with Our Technological Touch.</h1>
-    <p class="blurb lead">Leave the tech services to us while you focus on what you do best - running your business!</p>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-      <div class="call-btn">
-        <a href="tel:845-608-7516">
-          <button type="button" class="hero-btn btn btn-lg">Call Now</button>
-        </a>
-      </div>
-    </div>
-   </div>
   </div>
-</div>
 
 
-  
-<div class="divider">
-    <div class="divider-content">
-        <p class="divider-header">Don't let technology stress you out. Focus on your passion, and we'll handle the tech.</p>
+  <!-- Packages -->
+  <div class="packages pb-5">
+
+    <div class="services-title">
+      <h1 class="title">We Come In<span class="highlighted-text-grey packages"> Packages</span></h1>
+      <p class="services-subtitle">Prices and services tailored to your needs.</p>
+      <p class="services-subtitle">All packages inlcude a 6 month support window.</p>
     </div>
-</div>
-  
-  
-<div class="work-title">
-  <h1>What We've Done</h1>
-</div>
 
-<hr class="featurette-divider work-divider">
-  
-<div class="gradient-background">
-<div class="container">
-  <div class="card-container">
-    <!-- Card 1 -->
-    <div class="card">
-      <img src="../assets/ld_still.JPG" class="card-img-top desktop-img" alt="Image 1">
-      <img src="../assets/ld_mobile.png" class="card-img-top mobile-img" alt="Mobile Image 1">
-      <div class="overlay">
-        <p class="site-links">Click to visit <a class="link" href="https://www.lightingdistributorsllc.com/" target="_blank">lightingdistributorsllc.com</a></p>
+    <div class="container">
+
+      <div class="row row-cols-md-4 mb-3 text-center package-row">
+        <h1>Websites</h1>
+        <div class="col" *ngFor="let package of websitePackages">
+          <div class="card package-card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal package-title">{{package.name}}</h4>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title pricing-card-title">Starting at <span
+                  class="package-price">${{package.price}}</span></h3>
+              <ul class="list mt-3 mb-4 package-details text-left">
+                <li>{{package.note1}}</li>
+                <li>{{package.note2}}</li>
+                <li>{{package.note3}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+
     </div>
 
-    <!-- Card 2 -->
-    <div class="card">
-      <img src="../assets/uwor.JPG" class="card-img-top desktop-img" alt="Image 2">
-      <img src="../assets/uwor_mobile.png" class="card-img-top mobile-img" alt="Mobile Image 2">
-      <div class="overlay">
-        <p class="site-links">Click to visit <a class="link" href="https://www.unitedwomenofrockland.com/" target="_blank">unitedwomenofrockland.com</a></p>
+    <div class="container mt-5">
+
+      <div class="row row-cols-md-4 mb-3 text-center other-packages package-row">
+        <h1>Other</h1>
+        <div class="col" *ngFor="let package of otherPackages">
+          <div class="card package-card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal package-title">{{package.name}}</h4>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title pricing-card-title">Starting at <span
+                  class="package-price">${{package.price}}</span></h3>
+              <ul class="list mt-3 mb-4 package-details text-left">
+                <li>{{package.note1}}</li>
+                <li>{{package.note2}}</li>
+                <li>{{package.note3}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div></div>
       </div>
+
+
     </div>
 
-    <!-- Card 3 -->
-    <div class="card">
-      <img src="../assets/fiesta.JPG" class="card-img-top desktop-img" alt="Image 3">
-      <img src="../assets/fiesta_mobile.png" class="card-img-top mobile-img" alt="Mobile Image 3">
-      <div class="overlay">
-        <p class="site-links">Click to visit <a class="link" href="https://www.fiestabowlnj.com/" target="_blank">fiestabowl.com</a></p>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="card">
-      <img src="../assets/pcr.JPG" class="card-img-top desktop-img" alt="Image 4">
-      <img src="../assets/pcr_mobile.png" class="card-img-top mobile-img" alt="Mobile Image 4">
-      <div class="overlay">
-        <p class="site-links">Click to visit <a class="link" href="https://pcrdnatesting.com/" target="_blank">pcrdnatesting.com</a></p>
-      </div>
-    </div>
   </div>
-</div>
 
-  
-  
-  <!-- Inside your Angular component's HTML template (e.g., my-component.component.html) -->
-  <div class="container-features">
-    <div class="work-title">
-      <h1>Our Services</h1>
-    </div>
 
-    <hr class="featurette-divider">
-    
-    <div class="row featurette">
-      <div class="col-md-7 m-auto">
-        <h2 class="featurette-heading fw-normal lh-1">Website Services. </h2>
-        <p class="lead">We pride ourselves on being your go-to destination for a wide spectrum of web solutions. Whether you're in need of a stunning website, a robust web application, or mobile application, we've got you covered.</p>
-      </div>
-      <div class="col-md-5">
-        <img src="../assets/website_image_real.png" alt="Image" class="bd-placeholder-img-lg featurette-image img-fluid mx-auto">
-      </div>
-    </div>
-  
-    <hr class="featurette-divider">
-  
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2 m-auto">
-        <h2 class="featurette-heading fw-normal lh-1">Online Ordering/Delivery Services.</h2>
-        <p class="lead">Seamlessly connecting you with industry-leading online service platforms such as DoorDash, Grubhub, and Uber Eats. Our commitment is to provide your customers with a refined and convenient experience, ensuring the effortless enjoyment of your products.</p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <img src="../assets/ordering_image_real.png" alt="Image" class="bd-placeholder-img-lg featurette-image img-fluid mx-auto">
-      </div>
-    </div>
-  
-    <hr class="featurette-divider">
-  
-    <div class="row featurette">
-      <div class="col-md-7 m-auto">
-        <h2 class="featurette-heading fw-normal lh-1">POS System Setup.</h2>
-        <p class="lead">From initial ordering to seamless delivery, installation, and configuration, we've got you covered every step of the way. Our expertise extends to platforms such as Square, Toast, and Clover, ensuring a tailored solution for your unique needs.</p>
-      </div>
-      <div class="col-md-5">
-        <img src="../assets/POS_image_real.jpg" alt="Image" class="bd-placeholder-img-lg featurette-image img-fluid mx-auto">
-      </div>
-    </div>
-  </div>
-</div>
-  
+  <app-call-action></app-call-action>
