@@ -16,14 +16,14 @@ export class HomeComponent {
   ];
 
   websitePackages = [
-    { name: 'E-Commerce', price: '3,000', note1: 'Customized Storefront', note2: 'Secure Shopping Experience', note3: 'Optimized for desktop/tablet/mobile'},
-    { name: 'Standard', price: '1,200', note1: 'Customized & Professional Design', note2: 'SEO Optimized', note3: 'High Speed & Reliable'},
-    { name: 'Renovation', price: '1,000', note1: 'Modernized User Experience', note2: 'Content Update', note3: 'Optimized Performance'}
+    { name: 'E-Commerce', price: '2,000', note1: 'Customized Storefront', note2: 'Secure Shopping Experience', note3: 'Optimized for desktop/tablet/mobile'},
+    { name: 'Standard', price: '1,000', note1: 'Customized & Professional Design', note2: 'SEO Optimized', note3: 'High Speed & Reliable'},
+    { name: 'Renovation', price: '800', note1: 'Modernized User Experience', note2: 'Content Update', note3: 'Optimized Performance'}
   ]
 
   otherPackages = [
-    { name: 'Mobile App', price: '10,000', note1: 'Cross Platform Compatibility', note2: 'Customized User Interface', note3: 'Secure User Experience'},
-    { name: 'Everything', price: '6,000', note1: 'Website', note2: 'Online Services(Ordering, Delivery, Booking)', note3: 'POS System Setup(Location will adjust price)'}
+    { name: 'Mobile App', price: '8,000', note1: 'Cross Platform Compatibility', note2: 'Customized User Interface', note3: 'Secure User Experience'},
+    { name: 'Everything', price: '10,000', note1: 'Website', note2: 'Online Services(Ordering, Delivery, Booking)', note3: 'POS System Setup(Location will adjust price)'}
   ]
 
   selectedService = this.services[0];
