@@ -41,5 +41,9 @@ export class HomeComponent {
     }
   }
 
+  handleClick(event: any){
+    event.stopPropogation();
+  }
+
 
 }
