@@ -22,8 +22,8 @@ export class HomeComponent {
   ]
 
   otherPackages = [
-    { name: 'Mobile App', price: '8,000', note1: 'Cross Platform Compatibility', note2: 'Customized User Interface', note3: 'Secure User Experience'},
-    { name: 'Everything', price: '10,000', note1: 'Website', note2: 'Online Services(Ordering, Delivery, Booking)', note3: 'POS System Setup(Location will adjust price)'}
+    { name: 'Mobile App', price: '-', note1: 'Cross Platform Compatibility', note2: 'Customized User Interface', note3: 'Secure User Experience'},
+    { name: 'Everything', price: '-', note1: 'Website', note2: 'Online Services(Ordering, Delivery, Booking)', note3: 'POS System Setup(Location will adjust price)'}
   ]
 
   selectedService = this.services[0];
