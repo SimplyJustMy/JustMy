@@ -1,119 +1,28 @@
-.navbar-logo{
-    height: 120px;
-    margin-left: 25%;
+.navbar-logo {
+  height: 120px;
+  margin-left: 25%;
 }
 
-/* CSS for the navigation bar */
-.navbar {
-    margin: 0;
-    background-color: white;
-    border-radius: 0 !important;
+.hero-btn {
+  background-color: #b3cee3;
+  color: white;
+  font-size: 18px;
+  margin-left: 15px;
+}
+
+.call-btn {
+  display: flex;
+  justify-content: end;
+}
+
+
+@media screen and (max-width: 992px) {
+  .collapse:not(.show) {
+    display: none !important;
   }
-  
-  .nav-item{
-    text-align: center;
-  }
-  
-  .navbar-nav {
-    font-size: 16px;
-    a{
-      text-decoration: none;
-    }
-    
-  }
-  
-  .about-btn {
-    margin-right: 20px;
-    background-color: white;
-    color: #b3cee3;
-    border: 1px solid #b3cee3;
-  }
-  
-  .hero-btn {
-    background-color: #b3cee3;
-    color: white;
-    font-size: 18px;
-    margin-left: 15px;
-  }
-  
+
   .call-btn {
-    margin: auto;
+    align-items: center;
+    flex-direction: column;
   }
-  
-  .phone {
-    text-decoration: none;
-    color: darkgray;
-  }
-  
-  .phone-text {
-    font-size: 26px;
-  }
-
-  @media screen and (min-width: 1240px) {
-    .nav-pad{
-      padding-left: 55% !important;
-    }
-  }
-
-  @media screen and (min-width: 992px) {
-    .nav-pad{
-      padding-left: 45%;
-    }
-  }
-
-
-  @media screen and (max-width: 992px) {
-    .collapse:not(.show) {
-      display: none !important;
-    }
-
-    .navbar-logo{
-      margin-left: 0;
-  }
-
-
-    .navbar-nav{
-      float: none;
-    }
-
-    .call-btn{
-      display: none;
-    }
-
-    li{
-      float: none;
-    }
-  }
-
-  
-  // @media screen and (max-width: 768px) {
-
-
-  //   .navbar-toggler {
-  //     display: block;
-  //   }
-  
-  //   .navbar-collapse {
-  //     display: none;
-  //   }
-  
-  //   .navbar-toggler.collapsed + .navbar-collapse {
-  //     display: block;
-  //   }
-  
-  //   .phone-text {
-  //     font-size: 16px;
-  //   }
-  // }
-
-  
-  // @media screen and (max-width: 426px) {
-
-  //   .navbar-brand img {
-  //     height: 65px; /* Adjust the height of the logo as needed */
-  //   }
-
-  // }
-
-  
-  
+}
