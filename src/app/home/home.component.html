@@ -9,8 +9,8 @@
 </div>
 
 
+<!-- 
 
-<!-- New Services -->
 <div class="services large-screen-content">
 
   <div class="services-title">
@@ -29,10 +29,10 @@
     </div>
     <div class="col-4 service-showcase" [style.width.px]="selectedService.showcaseWidth">
       <div class="card-body">
-        <!-- Assuming this code is within a component template -->
+
         <div class="container">
           <div class="row">
-            <!-- Left column for text sections -->
+
             <div class="col-md-6">
               <div class="d-flex flex-column justify-content-between">
                 <h2 clas>What is it?</h2>
@@ -41,7 +41,7 @@
                 <p class="service-description">{{ selectedService.ourDescription }}</p>
               </div>
             </div>
-            <!-- Right column for image -->
+
             <div class="col-md-4 img-col">
               <img [src]="selectedService.image" [style.width.px]="selectedService.width" alt="Descriptive alt text">
             </div>
@@ -54,7 +54,7 @@
 </div>
 
 
-<!-- mobile services-->
+
 <div class="container mobile-services small-screen-content">
 
   <div class="services-title">
@@ -74,7 +74,7 @@
         <div class="accordion-body">
           <div class="container mb-5">
             <div class="row">
-              <!-- Left column for text sections -->
+
               <div class="col-md-6">
                 <div class="d-flex flex-column justify-content-between">
                   <h2>What is it?</h2>
@@ -85,7 +85,7 @@
                   </div>
                 </div>
               </div>
-              <!-- Right column for image -->
+
               <div class="col-md-4 img-col">
                 <img [src]="service.image" [style.width.px]="selectedService.width" alt="Descriptive alt text">
               </div>
@@ -95,9 +95,27 @@
       </div>
     </div>
   </div>
+</div> -->
+
+<div class="work">
+  <div class="work-title mb-5">
+    <h1 class="title">What We've <span class="highlighted-text">Done</span></h1>
+    <p class="services-subtitle">Growing local businesses everyday.</p>
+  </div>
+  <section id="slider_vertical">
+    <input type="radio" name="slider_vertical" id="sv1">
+    <input type="radio" name="slider_vertical" id="sv2">
+    <input type="radio" name="slider_vertical" id="sv3" checked>
+    <input type="radio" name="slider_vertical" id="sv4">
+    <label for="sv1" id="slide_vertical_1"></label>
+    <label for="sv2" id="slide_vertical_2"></label>
+    <label for="sv3" id="slide_vertical_3"></label>
+    <label for="sv4" id="slide_vertical_4"></label>
+  </section>
 </div>
 
 
+<!-- 
 <div class="gradient-background">
   <div class="container mb-5 pt-5 mmt-5">
     <div class="work-title mb-5">
@@ -105,7 +123,7 @@
       <p class="services-subtitle">Growing local businesses everyday.</p>
     </div>
     <div class="card-container">
-      <!-- Card 1 -->
+
       <div class="card sites">
         <img src="../assets/AVIF/ld_still.avif" class="card-img-top desktop-img" alt="Image 1">
         <img src="../assets/AVIF/ld_mobile.avif" class="card-img-top mobile-img" alt="Mobile Image 1">
@@ -114,7 +132,7 @@
         </div>
       </div>
 
-      <!-- Card 2 -->
+
       <div class="card sites">
         <img src="../assets/AVIF/uwor.avif" class="card-img-top desktop-img" alt="Image 2">
         <img src="../assets/AVIF/uwor_mobile.avif" class="card-img-top mobile-img" alt="Mobile Image 2">
@@ -123,7 +141,7 @@
         </div>
       </div>
 
-      <!-- Card 3 -->
+
       <div class="card sites">
         <img src="../assets/AVIF/fiesta.avif" class="card-img-top desktop-img" alt="Image 3">
         <img src="../assets/AVIF/fiesta_mobile.avif" class="card-img-top mobile-img" alt="Mobile Image 3">
@@ -132,7 +150,7 @@
         </div>
       </div>
 
-      <!-- Card 4 -->
+
       <div class="card sites">
         <img src="../assets/AVIF/pcr.avif" class="card-img-top desktop-img" alt="Image 4">
         <img src="../assets/AVIF/pcr_mobile.avif" class="card-img-top mobile-img" alt="Mobile Image 4">
@@ -141,11 +159,11 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
   <!-- Packages -->
-  <div class="packages pb-5">
+  <!-- <div class="packages pb-5">
 
     <div class="services-title">
       <h1 class="title">We Come In<span class="highlighted-text-grey packages"> Packages</span></h1>
@@ -203,7 +221,9 @@
 
     </div>
 
-  </div>
+  </div> -->
 
+
+  
 
   <app-call-action></app-call-action>

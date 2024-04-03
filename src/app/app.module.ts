@@ -12,6 +12,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { CallActionComponent } from './call-action/call-action.component';
 import { HeroComponent } from './hero/hero.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { HeroComponent } from './hero/hero.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
