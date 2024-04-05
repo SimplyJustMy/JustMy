@@ -33,6 +33,10 @@
           font-size: 48px;
         }
     }
+
+    .navbar-logo {
+      margin: 0 !important;
+    }
   
   
     .hero-btn{
@@ -42,7 +46,15 @@
 
   @media screen and (max-width: 460px) {
     .image-aboutus-banner {
-      height: 600px;
+      height: 900px;
+    }
+
+    .navbar-logo {
+      height: 150px !important;
+    }
+
+    .container{
+      margin: 0px !important;
     }
 }
 
