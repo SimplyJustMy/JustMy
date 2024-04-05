@@ -34,6 +34,8 @@
         }
     }
 
+
+
     .navbar-logo {
       margin: 0 !important;
     }
@@ -57,6 +59,13 @@
       margin: 0px !important;
     }
 }
+
+.navbar-toggler-icon{
+  width: 3em;
+  height: 3em;
+}
+
+
 
 .call-btn {
     margin: auto;
@@ -102,6 +111,13 @@
     .collapse:not(.show) {
       display: none !important;
     }
+    .nav-pad{
+      background-color: #333333be;
+    }
+
+    .hero-btn{
+      display: none;
+    }
   
     .call-btn {
       align-items: center;
@@ -115,3 +131,6 @@
   }
 
   
+  .navbar-nav{
+    text-align: center;
+  }

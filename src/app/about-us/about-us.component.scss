@@ -305,12 +305,26 @@
     display: flex;
     justify-content: end;
   }
+
+  .navbar-toggler-icon{
+    width: 3em;
+    height: 3em;
+  }
   
   
   @media screen and (max-width: 992px) {
     .collapse:not(.show) {
       display: none !important;
     }
+
+    .nav-pad{
+        background-color: #333333be;
+      }
+
+      .hero-btn{
+        display: none;
+      }
+    
   
     .call-btn {
       align-items: center;
@@ -354,3 +368,7 @@
       margin: 0px !important;
     }
 }
+
+.navbar-nav{
+    text-align: center;
+  }
