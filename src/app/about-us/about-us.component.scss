@@ -335,3 +335,22 @@
     width: 200px;
     height: 55px;
   }
+
+  @media screen and (max-width: 768px) {
+    .navbar-logo {
+      margin: 0 !important;
+    }
+  
+
+  }
+
+  @media screen and (max-width: 460px) {
+
+    .navbar-logo {
+      height: 150px !important;
+    }
+
+    .container{
+      margin: 0px !important;
+    }
+}
