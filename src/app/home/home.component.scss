@@ -1,13 +1,13 @@
 
 .divider {
-  background-color: #b3cee3ab;
+  background-color: #333333;
   text-shadow: 2px 2px 5px rgba(150, 150, 150, 0.5);
   padding: 15px;
 }
 
 .divider-header {
   text-align: center;
-  color: rgb(94, 94, 94);
+  color: rgb(236, 236, 236);
   font-size: 32px;
   padding: 2%;
 }
@@ -64,9 +64,10 @@
 }
 
 
-.card-img-top {
-  height: 300px;
-}
+
+// .card-img-top {
+//   height: 300px;
+// }
 
 .site-links {
   font-size: 26px;
@@ -77,39 +78,38 @@
   color: white;
 }
 
-/* Add the following rule to make the top set of cards horizontal */
-.card-container.vertical {
-  flex-direction: row;
-}
+// /* Add the following rule to make the top set of cards horizontal */
+// .card-container.vertical {
+//   flex-direction: row;
+// }
 
 
 /* Existing CSS */
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+// .card-container {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+// }
 
-/* Additional CSS for horizontal layout */
-.card-container.horizontal .card {
-  display: flex;
-  flex-direction: row;
-}
+// /* Additional CSS for horizontal layout */
+// .card-container.horizontal .card {
+//   display: flex;
+//   flex-direction: row;
+// }
 
 /* Additional CSS for styling */
 
 .sites{
   transition: transform 0.2s;
   position: relative;
-  height: 300px;
-  width: 500px; /* Adjust the spacing between cards */
-  margin: 10px; /* Adjust the spacing between cards */
+  // height: 300px;
+ 
+  margin: auto; /* Adjust the spacing between cards */
+  margin-bottom: 60px;
 }
 
-.card-img-top {
-  height: 300px;
-}
+
 
 .sites:hover {
   transform: scale(1.05);
@@ -313,7 +313,7 @@
 }
 
 .highlighted-text {
-  color: #b3cee3;
+  color: rgb(129, 129, 129);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* x-offset, y-offset, blur-radius, color */
   
 }
@@ -379,5 +379,6 @@
   margin: 0;
   padding-top: 80px;
   color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
