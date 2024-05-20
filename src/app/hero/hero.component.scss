@@ -14,6 +14,7 @@
 
   }
 
+
   .hero-text{
     .title{
       font-size: 64px;
@@ -97,7 +98,6 @@
     color: white;
     font-size: 28px;
     margin-left: 15px;
-    width: 200px;
     height: 55px;
   }
   
@@ -115,10 +115,9 @@
       background-color: #333333be;
     }
 
-    .hero-btn{
+    .nav-btn{
       display: none;
     }
-  
     .call-btn {
       align-items: center;
       flex-direction: column;
