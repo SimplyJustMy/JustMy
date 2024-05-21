@@ -6,8 +6,7 @@ const baseUrl = 'https://theofficialwebsiteguys.com';
 
 // Define your URLs
 const links = [
-  { url: '/', changefreq: 'daily', priority: 1.0 },
-  { url: '/about-us', changefreq: 'monthly', priority: 0.8 },
+  { url: '/', changefreq: 'daily', priority: 1.0 }
   // Add other pages as necessary
 ];
 
