@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FirebaseService } from '../firebase.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  contactForm!: FormGroup;
+
+  submitted: boolean = false;
 
   services = [
     { name: 'Website Development', ourDescription: 'Crafting bespoke websites that elevate local businesses, providing a digital platform that combines functionality, visual appeal, and a tailored approach to effectively showcase your unique brand to the world.', description: 'Programming tailor-made, functional, and visually appealing online platforms to effectively represent and grow your business in the digital world.', image: '../assets/AVIF/web-dev.avif', width: 300, showcaseWidth: 650, selectionWidth: 400 },
@@ -28,6 +34,12 @@ export class HomeComponent {
 
   selectedService = this.services[0];
 
+
+
+  constructor(private fb: FormBuilder, private firebaseService: FirebaseService) {}
+
+
+
   selectService(service: {name: string, ourDescription: string, description: string, image: string, width: number, showcaseWidth: number, selectionWidth: number}) {
     this.selectedService = service;
   }
@@ -44,6 +56,7 @@ export class HomeComponent {
   handleClick(event: any){
     event.stopPropogation();
   }
+
 
 
 }

@@ -1,0 +1,22 @@
+.image-aboutus-banner {
+    background: linear-gradient(#b3cee3ab, #b3cee3de), url("../assets/AVIF/hero_home.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    background-attachment: fixed;
+  }
+
+  .title{
+    padding-bottom: 50px;
+    margin: 0 !important;
+}
+
+.lg-text {
+    font-size:52px;
+    font-weight: 600;
+    text-transform: none;
+    color:#fff;
+}

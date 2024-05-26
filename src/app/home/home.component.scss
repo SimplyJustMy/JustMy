@@ -1,4 +1,3 @@
-
 .divider {
   background-color: #333333;
   padding: 15px;
@@ -11,26 +10,18 @@
   padding: 2%;
 }
 
-
-// .footer {
-//   margin-top: 150px;
-// }
-
-
-/* Define default styles for the images */
 .card .mobile-img {
-  display: none; /* Initially hide mobile images */
+  display: none;
+
 }
 
 .gradient-background {
   background: linear-gradient(#b3cee3, white);
 }
 
-
-
 @media screen and (max-width: 426px) {
 
-  .sites .card-img-top{
+  .sites .card-img-top {
     height: 1024px;
   }
 
@@ -38,16 +29,16 @@
     transition: transform 0.2s;
     position: relative;
     height: 625px !important;
-    width: 325px !important; /* Adjust the spacing between cards */
-    margin: 10px; /* Adjust the spacing between cards */
+    width: 325px !important;
+    margin: 10px;
   }
 
   .card .desktop-img {
-    display: none; /* Hide desktop images on mobile */
+    display: none;
   }
 
   .card .mobile-img {
-    display: block; /* Display mobile images on mobile screens */
+    display: block;
   }
 
   .divider-header {
@@ -64,10 +55,6 @@
 
 
 
-// .card-img-top {
-//   height: 300px;
-// }
-
 .site-links {
   font-size: 26px;
 }
@@ -77,38 +64,14 @@
   color: white;
 }
 
-// /* Add the following rule to make the top set of cards horizontal */
-// .card-container.vertical {
-//   flex-direction: row;
-// }
 
-
-/* Existing CSS */
-
-// .card-container {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: center;
-// }
-
-// /* Additional CSS for horizontal layout */
-// .card-container.horizontal .card {
-//   display: flex;
-//   flex-direction: row;
-// }
-
-/* Additional CSS for styling */
-
-.sites{
+.sites {
   transition: transform 0.2s;
   position: relative;
-  // height: 300px;
- 
-  margin: auto; /* Adjust the spacing between cards */
+
+  margin: auto;
   margin-bottom: 60px;
 }
-
-
 
 .sites:hover {
   transform: scale(1.05);
@@ -142,242 +105,27 @@
   color: white;
 }
 
-.work-title{
+.work-title {
   margin: auto;
   text-align: center;
-  .title{
+
+  .title {
     font-size: 48px;
   }
 }
 
-.services-title{
-    margin: auto;
-    margin-bottom: 60px;
-    text-align: center;
 
 
-
-    .title{
-      font-size: 48px;
-      color: #353535;
-    }
-}
-
-.service-description{
-  font-size: 18px;
-}
-
-.services-subtitle{
-  font-size: 16px;
-}
-
-
-.service-showcase{
-  height: 475px;
-  background-color: #f5f5f5;
-}
-
-.services{
-  background-color: white;
-  padding-bottom: 100px;
-}
-
-.services-selection{
-  padding: 0;
-}
-
-.services-row{
-  justify-content: center;
-  margin: 0 !important;
-}
-
-.list-group-item-action.active {
-  color: black;
-  background-color: #f5f5f5;
-  border: none;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
-
-.list-group-item-action:hover {
-  color: rgb(163, 163, 163);
-  background-color: #f8f8f8;
-  border: none;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  cursor: pointer;
-}
-
-.row{
-  margin: 0 !important;
-}
-
-.list-group-item {
-  border: none !important; /* Removes border */
-  border-radius: 0;
-  color: #cfcfcf;
-}
-
-.list-group {
-  font-size: 24px;
-  border: none !important; /* Removes border from the container */
-}
-
-.card-body{
-  font-size: 24px;
-}
-
-.other-packages{
-  justify-content: center;
-}
-
-
-.package-details{
-  font-size: 16px;
-}
-
-.package-title{
-  font-size: 24px;
-
-}
-
-.package-price{
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.package-card{
-  height: 300px;
-}
-
-@media screen and (max-width: 1200px) {
-  .package-card{
-    height: 400px;
-  }
-}
-
-@media screen and (max-width: 990px) {
-  .package-card{
-    height: 450px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .package-card{
-    height: 300px;
-  }
-
-  .package-details{
-    font-size: 20px;
-  }
-
-  .package-row{
-    display: block;
-  }
-}
-
-
-.img-col{
-  margin-top: 60px;
-}
-
-
-.mobile-services{
-  max-width: 800px;
-  margin-bottom: 100px;
-}
-
-.mobile-service-name{
-  font-size: 28px;
-}
-
-/* This CSS hides the large-screen content by default and only shows the small-screen content */
-.small-screen-content {
-  display: block; /* Or 'flex', 'grid', etc., depending on your layout needs */
-}
-
-.large-screen-content {
-  display: none;
-}
-
-/* This media query activates when the screen width is 1240px or larger */
-@media (min-width: 1240px) {
-  .small-screen-content {
-    display: none;
-  }
-
-  .large-screen-content {
-    display: block; /* Or 'flex', 'grid', etc., depending on your layout needs */
-  }
-}
-
-.highlighted-text {
-  color: rgb(129, 129, 129);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* x-offset, y-offset, blur-radius, color */
-  
-}
-
-.highlighted-text-grey {
-  color: rgb(129, 129, 129);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* x-offset, y-offset, blur-radius, color */
-}
-
-/* Style for non-collapsed (active) accordion buttons */
-.accordion-button:not(.collapsed) {
-  background-color: #b3cee3ab; /* Replace with your preferred color */
-  color: white; /* Optional: change text color if needed for better contrast */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Style for the accordion header when active */
-.accordion-header .active {
-  background-color: #b3cee3; /* Darker shade for the header (optional) */
-}
-
-.accordion-header{
-  margin: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-[type='radio'] {
-  display: none;
-}
-
-#slider {
-  margin-top: 10vh;
-  margin-bottom: 10vh;
-  height: 35vw;
-  position: relative;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-}
-
-#slider label {
-  margin: auto;
-  width: 60%;
-  height: 100%;
-  border-radius: 4px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  cursor: pointer;
-  transition: transform 0.4s ease;
-}
-
-
-.title{
+.title {
   margin: 0;
   padding-top: 80px;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+
+
+
+.contact-form-container {
+  background: #333333;
+}

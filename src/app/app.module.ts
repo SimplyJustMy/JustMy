@@ -13,6 +13,9 @@ import { CallActionComponent } from './call-action/call-action.component';
 import { HeroComponent } from './hero/hero.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +26,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AboutUsComponent,
     CallActionComponent,
     HeroComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
