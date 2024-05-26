@@ -27,7 +27,7 @@ const links = [
     changefreq: 'monthly',
     priority: 0.8,
     images: [
-      { url: `${baseUrl}/favicon.ico`, title: 'About Us Icon' }
+      { url: `${baseUrl}/favicon.ico`, title: 'Contact Icon' }
     ]
   }
   // Add other pages as necessary
