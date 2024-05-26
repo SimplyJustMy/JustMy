@@ -8,7 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { CallActionComponent } from './call-action/call-action.component';
 import { HeroComponent } from './hero/hero.component';
 
@@ -36,7 +36,7 @@ import { ContactComponent } from './contact/contact.component';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
