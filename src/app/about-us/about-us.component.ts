@@ -31,7 +31,7 @@ export class AboutUsComponent {
       name: 'Jared',
       image1: 'assets/AVIF/Jared_Finn.avif',
       image2: 'assets/jared-cow.jpg',
-      description: 'Having always been inspired by my fathers ownership of 2 local pizzarias, I decided to leverage my experience in the software industry to create my own business. I built a team dedicated to helping local businesses in our communities thrive online with outstanding websites.',
+      description: 'Having always been inspired by my fathers ownership of 2 local pizzerias, I decided to leverage my experience in the software industry to create my own business. I built a team dedicated to helping local businesses in our communities thrive online with outstanding websites.',
       showDetails: false
     },
     {
