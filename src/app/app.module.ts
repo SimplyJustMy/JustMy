@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ContactComponent } from './contact/contact.component';
     CallActionComponent,
     HeroComponent,
     ContactComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,

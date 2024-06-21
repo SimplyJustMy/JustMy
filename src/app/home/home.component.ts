@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { FirebaseService } from '../firebase.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -39,6 +39,12 @@ export class HomeComponent {
   constructor(private fb: FormBuilder, private firebaseService: FirebaseService) {}
 
 
+  isMobile: boolean = window.innerWidth <= 768;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.isMobile = window.innerWidth <= 768;
+  }
 
   selectService(service: {name: string, ourDescription: string, description: string, image: string, width: number, showcaseWidth: number, selectionWidth: number}) {
     this.selectedService = service;
@@ -58,5 +64,51 @@ export class HomeComponent {
   }
 
 
+  projects = [
+    {
+      name: 'Rye Auto Boat Detailing',
+      image: 'assets/AVIF/rye-desktop.avif',
+      image2: 'assets/AVIF/rye-mobile.avif',
+      story: 'Short story about the Meraki project...',
+      showDetails: true
+    },
+    {
+      name: 'Annies Petsitting',
+      image: 'assets/AVIF/annies-petsitting-desktop.avif',
+      image2: 'assets/AVIF/annies-petsitting-mobile.avif',
+      story: 'Short story about the Michelle Hay Management project...',
+      showDetails: false
+    },
+    {
+      name: 'Lighting Distributors LLC',
+      image: 'assets/AVIF/ld_still.avif',
+      image2: 'assets/AVIF/ld_mobile.avif',
+      story: 'Short story about The Booking Project...',
+      showDetails: false
+    },
+    {
+      name: 'Fiesta Bowl',
+      image: 'assets/AVIF/fiesta.avif',
+      image2: 'assets/AVIF/fiesta_mobile.avif',
+      story: 'Short story about The Booking Project...',
+      showDetails: false
+    },
+    {
+      name: 'PCR DNA Testing',
+      image: 'assets/AVIF/pcr.avif',
+      image2: 'assets/AVIF/pcr_mobile.avif',
+      story: 'Short story about The Booking Project...',
+      showDetails: false
+    },
+  ];
+
+  showDetails(project: any) {
+    this.projects.forEach(p => p.showDetails = false);
+    project.showDetails = true;
+  }
+
+  hideDetails(project: any) {
+    project.showDetails = false;
+  }
 
 }

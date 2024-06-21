@@ -1,3 +1,15 @@
+<div id="parallaxBanner" class="video-aboutus-banner">
+    <app-navbar></app-navbar>
+
+    <video autoplay muted loop id="heroVideo">
+        <source src="../../assets/hero-video.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+
+   
+
+</div>
+<!-- 
 <div class="container team-section paddingTB60">
     <div class="row">
         <div class="site-heading text-center">
@@ -77,8 +89,27 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+
+<div class="team-section">
+    <h1 class="text-center mb-5">Meet The Guys</h1>
+    <div class="row" *ngFor="let row of teamRows">
+      <div class="team-member col-md-6" *ngFor="let member of row; let i = index" 
+           (mouseenter)="showDetails(member)" (mouseleave)="hideDetails(member)" 
+           [ngClass]="{'reverse-slide': i % 2 !== 0}">
+        <div class="image-strip">
+          <img [src]="member.image1" class="team-image" alt="Team Member Image">
+          <img [src]="member.image2" class="team-image middle-image" alt="Team Member Image">
+        </div>
+        <div class="team-details" [ngClass]="{'active': member.showDetails}">
+          <h1>{{ member.name }}</h1>
+          <p class="desc">{{ member.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
 
 <app-call-action></app-call-action>
-
- 

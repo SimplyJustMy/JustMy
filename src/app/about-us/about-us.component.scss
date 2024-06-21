@@ -45,3 +45,125 @@
     padding-top: 60px;
     padding-bottom: 60px;
 }
+
+.video-aboutus-banner {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  #heroVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+
+  .team-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #f5f5f5;
+  }
+  
+  .row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .team-member {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    overflow: hidden;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    padding: 0 !important;
+  }
+  
+  .image-strip {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .team-image {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .middle-image {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .team-member:hover .image-strip {
+    transform: translateX(-50%);
+  }
+  
+  .team-member.reverse-slide:hover .image-strip {
+    transform: translateX(50%);
+  }
+  
+  .team-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .team-details.active {
+    opacity: 1;
+  }
+  
+  .team-details h1 {
+    margin: 0 0 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .team-details p {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .team-member {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .team-image {
+      width: 50%;
+    }
+  }
+  

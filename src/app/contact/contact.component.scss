@@ -12,3 +12,27 @@
     text-align: center;
     margin-top: 15px;
 }
+
+.video-aboutus-banner {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  #heroVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+
+

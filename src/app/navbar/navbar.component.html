@@ -3,8 +3,8 @@
 
     <a class="" href="#"><img class="navbar-logo" src="../assets/twg_logo_nobg.png" alt="logo"></a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Navbar toggler button -->
+    <button class="navbar-toggler order-1 mt-4" type="button" (click)="toggleMobileMenu()">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -25,6 +25,37 @@
         <a href="tel:845-608-7516">
           <button type="button" class="nav-btn hero-btn btn btn-lg">Call Now</button>
         </a>
+      </div>
+    </div>
+
+    <!-- Slide-in menu for smaller screens -->
+    <div class="slide-in-menu" [class.active]="mobileMenuActive">
+      <div class="slide-in-menu-content">
+        <!-- Close button -->
+        <button class="close-button" (click)="closeMenu()">×</button>
+
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about-us" routerLinkActive="active">Meet The Guys</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+          </li>
+        </ul>
+
+        <div class="container slide-footer text-center">
+          <img src="../../assets/twg_logo_nobg.png" id="logo" height="100" alt="Logo Description" />
+          <p class="text-dark mt-3">The Official Website Guys LLC</p>
+          <section class="m-4">
+            <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/ltdhypekittery/" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+            <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="" role="button" data-mdb-ripple-color="dark"><i class="fab fa-tiktok"></i></a>
+
+          </section>
+        </div>
       </div>
     </div>
   </div>
