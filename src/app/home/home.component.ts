@@ -66,6 +66,20 @@ export class HomeComponent {
 
   projects = [
     {
+      name: 'Limited Hype',
+      image: 'assets/AVIF/ltd-desktop.avif',
+      image2: 'assets/AVIF/ltd-mobile.avif',
+      story: 'Short story about the Meraki project...',
+      showDetails: true
+    },
+    {
+      name: 'Let Em\' Eat Cake',
+      image: 'assets/AVIF/cake-desktop.avif',
+      image2: 'assets/AVIF/cake-mobile.avif',
+      story: 'Short story about the Meraki project...',
+      showDetails: true
+    },
+    {
       name: 'Rye Auto Boat Detailing',
       image: 'assets/AVIF/rye-desktop.avif',
       image2: 'assets/AVIF/rye-mobile.avif',
