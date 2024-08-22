@@ -6,39 +6,29 @@ import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent implements OnInit, AfterViewInit  {
-  public contactLink!: string;
 
-  constructor() {
-    this.setContactLink();
-  }
 
-  ngOnInit(): void {
-    this.setContactLink();
-  }
+  constructor() { }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(_event: any) {
-    this.setContactLink();
-  }
-
-  setContactLink() {
-    if (window.innerWidth <= 992) {
-      this.contactLink = 'tel:845-608-7516';
-    } else {
-      this.contactLink = '/contact';
-    }
-  }
+  ngOnInit(): void { }
   
-
   ngAfterViewInit(): void {
-    this.muteVideo();
+    this.playHeroVideo();
   }
 
-  private muteVideo(): void {
+  private playHeroVideo(): void {
     const heroVideo = document.getElementById('heroVideo') as HTMLVideoElement;
     if (heroVideo) {
       heroVideo.muted = true;
       heroVideo.setAttribute('muted', 'true');
+      heroVideo.autoplay = true;
+      heroVideo.setAttribute('autoplay', 'true');
+      heroVideo.loop = true;
+      heroVideo.setAttribute('loop', 'true');
+      heroVideo.play().catch(error => {
+        // Handle video play error if needed
+        console.error('Error attempting to play video:', error);
+      });
     }
   }
 }

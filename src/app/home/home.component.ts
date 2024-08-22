@@ -66,16 +66,23 @@ export class HomeComponent {
 
   projects = [
     {
+      name: 'Amores Mexican Restaurant',
+      image: 'assets/amores-desktop.png',
+      image2: 'assets/amores-mobile.png',
+      story: 'Short story about the Meraki project...',
+      showDetails: true
+    },
+    {
       name: 'Limited Hype',
-      image: 'assets/AVIF/ltd-desktop.avif',
-      image2: 'assets/AVIF/ltd-mobile.avif',
+      image: 'assets/AVIF/ltdhype-desktop.avif',
+      image2: 'assets/AVIF/ltdhype-mobile.avif',
       story: 'Short story about the Meraki project...',
       showDetails: true
     },
     {
       name: 'Let Em\' Eat Cake',
-      image: 'assets/AVIF/cake-desktop.avif',
-      image2: 'assets/AVIF/cake-mobile.avif',
+      image: 'assets/AVIF/cakes-desktop.avif',
+      image2: 'assets/AVIF/cakes-mobile.avif',
       story: 'Short story about the Meraki project...',
       showDetails: true
     },
@@ -88,8 +95,8 @@ export class HomeComponent {
     },
     {
       name: 'Annies Petsitting',
-      image: 'assets/AVIF/annies-petsitting-desktop.avif',
-      image2: 'assets/AVIF/annies-petsitting-mobile.avif',
+      image: 'assets/AVIF/annies-desktop.avif',
+      image2: 'assets/AVIF/annies-mobile.avif',
       story: 'Short story about the Michelle Hay Management project...',
       showDetails: false
     },
@@ -101,16 +108,9 @@ export class HomeComponent {
       showDetails: false
     },
     {
-      name: 'Fiesta Bowl',
-      image: 'assets/AVIF/fiesta.avif',
-      image2: 'assets/AVIF/fiesta_mobile.avif',
-      story: 'Short story about The Booking Project...',
-      showDetails: false
-    },
-    {
       name: 'PCR DNA Testing',
-      image: 'assets/AVIF/pcr.avif',
-      image2: 'assets/AVIF/pcr_mobile.avif',
+      image: 'assets/AVIF/pcr-desktop.avif',
+      image2: 'assets/AVIF/pcr-mobile.avif',
       story: 'Short story about The Booking Project...',
       showDetails: false
     },

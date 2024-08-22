@@ -141,7 +141,7 @@ app-navbar {
 
 .call-btn {
   display: flex;
-  justify-content: end;
+  //justify-content: end;
 }
 
 @media screen and (max-width: 992px) {
@@ -196,14 +196,14 @@ app-navbar {
 .hero-btn {
   background-color: #b3cee3;
   color: white;
-  font-size: 28px;
+  font-size: 24px;
   margin-left: 15px;
   height: 55px;
 }
 
 .call-btn {
   display: flex;
-  justify-content: end;
+  //justify-content: end;
 }
 
 @media screen and (max-width: 992px) {

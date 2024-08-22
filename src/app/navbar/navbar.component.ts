@@ -10,15 +10,29 @@ export class NavbarComponent {
   title = 'just-my';
   showPhoneNumber: boolean = false;
   mobileMenuActive = false;
+  public contactLink!: string;
 
   constructor(private router: Router) {}
 
+  ngOnInit(): void {
+    this.setContactLink();
+  }
+
   closeMenu() {
     this.mobileMenuActive = false;
-}
+  }
 
   toggleMobileMenu() {
     console.log("here");
     this.mobileMenuActive = !this.mobileMenuActive;
   }
+
+  setContactLink() {
+    if (window.innerWidth <= 525) {
+      this.contactLink = 'tel:845-608-7516';
+    } else {
+      this.contactLink = '/contact';
+    }
+  }
+  
 }
