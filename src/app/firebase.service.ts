@@ -9,22 +9,15 @@ export class FirebaseService {
 
   constructor(private http: HttpClient) { }
 
-  sendEmail(emailData: { name: string; email: string; phone: string; proposal: string }) {
-    const functionUrl = 'https://us-central1-the-website-guys-inquiry.cloudfunctions.net/sendEmail'; // Update this URL with your actual Cloud Function URL
-  
-    const body = {
-      "data": {
-        "name": emailData.name,
-        "email": emailData.email,
-        "phone": emailData.phone,
-        "proposal": emailData.proposal
-      }
-    };
-    return this.http.post(functionUrl, body);
+  sendEmail(emailData: FormData) {
+    //const functionUrl = 'http://localhost:3000/send-email';
+    const functionUrl = 'https://twg-template-submission-92b1532f00c1.herokuapp.com';
+    return this.http.post(functionUrl, emailData);
   }
   
-
-
-  
+  // sendConfirmationEmail(userEmail: string) {
+  //   const functionUrl = 'https://us-central1-the-website-guys-inquiry.cloudfunctions.net/sendConfirmationEmail';
+  //   return this.http.post(functionUrl, { email: userEmail });
+  // }
 
 }

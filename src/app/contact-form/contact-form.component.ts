@@ -9,19 +9,11 @@ import { FirebaseService } from '../firebase.service';
 })
 export class ContactFormComponent {
 
-  
   contactForm!: FormGroup;
-
   submitted: boolean = false;
-  
-  // name: string = '';
-  // email: string = '';
-  // message: string = '';
-
-  // name: string = '';
-  // email: string = '';
-  // phone: string = '';
-  // comment: string = '';
+  dragOver: boolean = false;
+  uploadedFiles: File[] = [];  // Array to hold the uploaded files
+  successMessage: string = ''; // Variable to hold the success message
 
   constructor(private fb: FormBuilder, private firebaseService: FirebaseService) {}
 
@@ -30,52 +22,76 @@ export class ContactFormComponent {
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required],
-      proposal: ['', Validators.required]
+      serviceType: ['', Validators.required],  // Updated to match the form template
+      proposal: ['', Validators.required],
+      images: [null]
     });
   }
 
-  ngAfterViewInit(): void {
-    const heroVideo = document.getElementById('heroVideo') as HTMLVideoElement;
-    if (heroVideo) {
-      heroVideo.muted = true;
-      heroVideo.setAttribute('muted', 'true'); // Ensures attribute is set
+  triggerFileInput(fileInput: HTMLInputElement) {
+    fileInput.click();
+  }
+
+  onImagesChange(event: any) {
+    const files = event.target.files;
+    if (files.length > 0) {
+      this.uploadedFiles = Array.from(files); 
+      this.contactForm.patchValue({
+        images: this.uploadedFiles 
+      });
     }
   }
-  
+
+  onDragOver(event: DragEvent) {
+    event.preventDefault();
+    this.dragOver = true;
+  }
+
+  onDragLeave(event: DragEvent) {
+    event.preventDefault();
+    this.dragOver = false;
+  }
+
+  onDrop(event: DragEvent) {
+    event.preventDefault();
+    this.dragOver = false;
+    const files = event.dataTransfer?.files;
+    if (files && files.length > 0) {
+      this.uploadedFiles = Array.from(files);  // Store files in the uploadedFiles array
+      this.contactForm.patchValue({
+        images: this.uploadedFiles  // Adding all files to the images array
+      });
+    }
+  }
+
   sendEmail() {
-    this.submitted = !this.submitted;
+    this.submitted = true; // Set to true to show the spinner and disable the button
 
-    this.firebaseService.sendEmail(this.contactForm.value).subscribe(
-      response => {
-        console.log('Email sent successfully!', response);
-      },
-      error => {
-        console.error('Error sending email:', error);
-      }
+    const formData = new FormData();
+    formData.append('name', this.contactForm.get('name')?.value);
+    formData.append('email', this.contactForm.get('email')?.value);
+    formData.append('phone', this.contactForm.get('phone')?.value);
+    formData.append('serviceType', this.contactForm.get('serviceType')?.value);
+    formData.append('proposal', this.contactForm.get('proposal')?.value);
+
+    const files: File[] = this.contactForm.get('images')?.value;
+    if (files) {
+        for (let i = 0; i < files.length; i++) {
+            formData.append('images[]', files[i]);
+        }
+    }
+
+    this.firebaseService.sendEmail(formData).subscribe(
+        response => {
+            console.log('Email sent successfully!', response);
+            this.successMessage = 'Your website template request has been submitted successfully!';
+            this.submitted = false; // Reset the submitted flag
+        },
+        error => {
+            console.error('Error sending email:', error);
+            this.submitted = false; // Reset the submitted flag even if there's an error
+        }
     );
-    
-  }
+}
 
-  onSubmit() {
-    // const formData = {
-    //   name: this.name,
-    //   email: this.email,
-    //   phone: this.phone,
-    //   comment: this.comment
-    // };
-
-    // // this.http.post('http://localhost:3000/send-email', formData)
-    // //   .subscribe(response => {
-    // //     console.log('Email sent successfully', response);
-    // //   }, error => {
-    // //     console.error('Error sending email', error);
-    // //   });
-
-    //   this.http.post('https://limited-hype-server-fc852c1e4c1b.herokuapp.com/send-email', formData)
-    //   .subscribe(response => {
-    //     console.log('Email sent successfully', response);
-    //   }, error => {
-    //     console.error('Error sending email', error);
-    //   });
-  }
 }

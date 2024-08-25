@@ -67,49 +67,49 @@ export class HomeComponent {
   projects = [
     {
       name: 'Amores Mexican Restaurant',
-      image: 'assets/amores-desktop.png',
+      image: 'assets/amores-display.png',
       image2: 'assets/amores-mobile.png',
       story: 'Short story about the Meraki project...',
       showDetails: true
     },
     {
       name: 'Limited Hype',
-      image: 'assets/AVIF/ltdhype-desktop.avif',
+      image: 'assets/ltd-display.png',
       image2: 'assets/AVIF/ltdhype-mobile.avif',
       story: 'Short story about the Meraki project...',
       showDetails: true
     },
     {
       name: 'Let Em\' Eat Cake',
-      image: 'assets/AVIF/cakes-desktop.avif',
+      image: 'assets/cake-display.png',
       image2: 'assets/AVIF/cakes-mobile.avif',
       story: 'Short story about the Meraki project...',
       showDetails: true
     },
     {
       name: 'Rye Auto Boat Detailing',
-      image: 'assets/AVIF/rye-desktop.avif',
+      image: 'assets/rye-display.png',
       image2: 'assets/AVIF/rye-mobile.avif',
       story: 'Short story about the Meraki project...',
       showDetails: true
     },
     {
       name: 'Annies Petsitting',
-      image: 'assets/AVIF/annies-desktop.avif',
+      image: 'assets/annie-display.png',
       image2: 'assets/AVIF/annies-mobile.avif',
       story: 'Short story about the Michelle Hay Management project...',
       showDetails: false
     },
     {
       name: 'Lighting Distributors LLC',
-      image: 'assets/AVIF/ld_still.avif',
+      image: 'assets/lighting-display.png',
       image2: 'assets/AVIF/ld_mobile.avif',
       story: 'Short story about The Booking Project...',
       showDetails: false
     },
     {
       name: 'PCR DNA Testing',
-      image: 'assets/AVIF/pcr-desktop.avif',
+      image: 'assets/pcr-display.png',
       image2: 'assets/AVIF/pcr-mobile.avif',
       story: 'Short story about The Booking Project...',
       showDetails: false

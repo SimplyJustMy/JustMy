@@ -1,9 +1,9 @@
 <app-hero></app-hero>
 
 <div class="divider">
-  <div class="divider-content">
+  <!-- <div class="divider-content">
     <p class="divider-header">Simplify Your Online Journey</p>
-  </div>
+  </div> -->
 </div>
 
 
@@ -67,37 +67,20 @@
       </div>
     </div>
   </div> -->
-
   <div class="container-fluid">
-    <!-- <h2 class="text-center m-0 pt-5">Boosted Businesses</h2>
-    <p class="text-center">
-      Whether your business requires a simple one-page website, a multipage platform, or a full-fledged eCommerce online shop, we've got you covered. Our expertise ensures your online presence is professional, engaging, and tailored to your specific needs.
-    </p> -->
     <div class="row justify-content-center projects-container">
-      <div class="col-12 col-md-10 mb-5">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="project-list">
-              <div class="project" *ngFor="let project of projects" (mouseenter)="showDetails(project)" (mouseleave)="hideDetails(project)">
-                <div class="project-header">
-                  <h3>{{ project.name }}</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 site-display">
-            <div class="project-details-container">
-              <div class="project-details" *ngFor="let project of projects" [class.active]="project.showDetails">
-                <img *ngIf="!isMobile" [src]="project.image" class="img-fluid desktop-img" alt="Project Image">
-                <img *ngIf="isMobile" [src]="project.image2" class="img-fluid mobile-img" alt="Project Image">
-                <!-- <p>{{ project.story }}</p> -->
-              </div>
+      <div class="col-12 col-md-10">
+        <div class="row justify-content-center">
+          <div class="col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center" *ngFor="let project of projects">
+            <div class="project">
+              <img [src]="project.image" class="img-fluid project-img" alt="Project Image">
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  
   
 
 
