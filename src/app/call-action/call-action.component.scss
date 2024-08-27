@@ -1,22 +1,70 @@
-.cta-padding35 {
-  padding: 35px 0 35px;
-  background-color: #5c5c5c;
+.cta-section {
+  position: relative;
+  background-image: url('/path-to-your-background-image.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
   color: #fff;
 }
 
-.site-btn {
-  font-size: 22px;
-  padding: 13px 30px;
-  border-radius: 5px;
-  border: 1px solid white;
-  min-width: 200px;
-  display: inline-block;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  color: #b3cee3;
-  background-color: white;
-  transition: all .25s ease-in-out;
-  margin: 10px 0px 10px 0px;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity as needed */
+}
 
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.cta-subtitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cta-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  color: #000;
+}
+
+.cta-form h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.cta-form .form-control {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.cta-form .form-check-label {
+  font-size: 14px;
+}
+
+.cta-form .site-btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #b3cee3;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-form .site-btn:hover {
+  background-color: #9ac1df;
 }

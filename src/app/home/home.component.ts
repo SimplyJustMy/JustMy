@@ -106,14 +106,7 @@ export class HomeComponent {
       image2: 'assets/AVIF/ld_mobile.avif',
       story: 'Short story about The Booking Project...',
       showDetails: false
-    },
-    {
-      name: 'PCR DNA Testing',
-      image: 'assets/pcr-display.png',
-      image2: 'assets/AVIF/pcr-mobile.avif',
-      story: 'Short story about The Booking Project...',
-      showDetails: false
-    },
+    }
   ];
 
   showDetails(project: any) {

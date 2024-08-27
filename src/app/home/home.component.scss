@@ -97,14 +97,9 @@
   opacity: 1;
 }
 
-.site-links {
-  font-size: 26px;
-}
 
-.link {
-  text-decoration: none;
-  color: white;
-}
+
+
 
 .work-title {
   margin: auto;
@@ -143,6 +138,7 @@
 
 .project {
   padding: 20px;
+  position: relative;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   overflow: hidden;
@@ -150,6 +146,7 @@
   &:hover {
     background-color: #535353;
     color: #161616;
+    transform: scale(1.05);
   }
 
   .project-header {
@@ -248,6 +245,7 @@
 }
 
 
+
 /* Mobile */
 @media screen and (max-width: 468px) {
   .desktop-img {
@@ -279,21 +277,12 @@
   justify-content: center; /* Center the grid content */
 }
 
-.project {
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-}
-
 .project-img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.project:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
-}
 
 
 /* Media Queries */
@@ -307,4 +296,113 @@
   .project-grid {
     grid-template-columns: repeat(1, 1fr); /* 1 column on extra small screens */
   }
+}
+
+
+.custom-services {
+  background-color: #161616; /* Black background */
+  padding: 60px 0;
+  color: white;
+}
+
+.services-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.services-subtitle {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.services-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  flex: 1 1 300px; /* Flex-grow, flex-shrink, and min-width */
+  max-width: 350px; /* Control maximum width */
+  height: 450px; /* Make the cards taller */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-card img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.service-card p {
+  font-size: 16px;
+  flex-grow: 1; /* This makes sure the paragraph takes available space */
+  margin-bottom: 20px;
+}
+
+.explore-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.explore-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .services-title {
+      font-size: 28px;
+  }
+  .service-card h3 {
+      font-size: 18px;
+  }
+  .service-card p {
+      font-size: 14px;
+  }
+  .service-card {
+      height: auto; /* Adjust the height for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .services-title {
+      font-size: 24px;
+  }
+  .service-card img {
+      width: 50px;
+  }
+  .service-card h3 {
+      font-size: 16px;
+  }
+  .service-card p {
+      font-size: 14px;
+  }
+  .service-card {
+      height: auto; /* Adjust the height for smaller screens */
+  }
+}
+
+
+.row{
+  margin: 0 !important;
 }

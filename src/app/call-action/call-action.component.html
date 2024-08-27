@@ -1,12 +1,43 @@
-<div class="cta-sektion cta-padding35 text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="footer-detail">Need help getting your business online?</h3>
-          <a href="tel:+18456087516">
-            <button type="button" class="btn btn-primary site-btn mt-3">Call Now - (845) 596-0635</button>
-          </a>
+<div class="cta-section">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="cta-title">Let Us Help Build Your Business. Your Way.</h2>
+        <p class="cta-subtitle">Whatever your goal — we'll get you there.</p>
+      </div>
+      <div class="col-md-6">
+        <div class="cta-form">
+          <h3>Submit a form today and we will be in touch soon.</h3>
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <input type="text" class="form-control" formControlName="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" formControlName="business" placeholder="Business Name">
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-control" formControlName="phone" placeholder="Phone">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" formControlName="email" placeholder="Email address">
+            </div>
+            <!-- <button type="submit" class="btn btn-primary site-btn" [disabled]="!contactForm.valid">Get In Touch With A Website Guy</button> -->
+
+            <button type="submit" class="submit-button mt-3 btn btn-primary site-btn text-white" [disabled]="submitted">
+              <span *ngIf="!submitted">Get A Website Template</span>
+              <span *ngIf="submitted">
+                <i class="fa fa-spinner fa-spin"></i> Sending...
+              </span>
+            </button>
+            
+            <div *ngIf="successMessage" class="alert alert-success mt-3">
+              {{ successMessage }}
+            </div>
+            
+          </form>
         </div>
       </div>
     </div>
   </div>
+</div>
