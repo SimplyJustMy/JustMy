@@ -20,7 +20,6 @@
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
     "firebase": "^10.12.1",
-    "mdb-angular-ui-kit": "^5.1.0",
     "nodemailer": "^6.9.13",
     "jquery": "^3.7.1",
     "rxjs": "~7.8.0",
