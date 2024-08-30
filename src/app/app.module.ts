@@ -17,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { LogoCarouselComponent } from './logo-carousel/logo-carousel.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     HeroComponent,
     ContactComponent,
     ContactFormComponent,
+    LogoCarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    CarouselModule
   ],
   providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }],
   bootstrap: [AppComponent]
