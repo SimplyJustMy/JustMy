@@ -1,10 +1,12 @@
-.business-growth-section{
-    background-color: #161616;
-    align-items: center; /* Aligns the text and carousel vertically */
-    justify-content: center; /* Centers the entire section horizontally */
-    margin: 0 auto; /* Centers the section on the screen */
-  }
-  
+.business-growth-section {
+  background-color: #161616;
+  align-items: center; /* Aligns the text and carousel vertically */
+  justify-content: center; /* Centers the entire section horizontally */
+  margin: 0 auto; /* Centers the section on the screen */
+  z-index: 0; /* Set the z-index for the entire section */
+  position: relative; /* Ensure z-index works by setting position relative */
+}
+
   .logo-carousel-container {
     background-color: #161616; /* Match the background color with surrounding elements */
     padding: 15px 0;
@@ -33,6 +35,7 @@
   .owl-carousel .owl-stage-outer {
     padding-left: 0px !important;
   }
+  
   
   .owl-carousel .owl-item {
     opacity: 0.8; /* Add slight transparency to logos */
